@@ -1,0 +1,46 @@
+clear;
+x=-3:0.04:3;
+y=-3:0.04:3;
+m=numel(x);
+n=numel(y);
+X=zeros(m,n);
+Y=zeros(m,n);
+Z=zeros(m,n);
+for i=1:m
+    for j=1:n
+        X(i,j)=x(i);
+        Y(i,j)=y(j);
+        Z(i,j)=(2*X(i,j)+6*Y(i,j))/2;
+    end
+end
+hold on
+for i=1:m
+    for j=1:n
+        X1(i,j)=x(i);
+        Y1(i,j)=y(j);
+        Z1(i,j)=(1*X1(i,j)+1*Y1(i,j))/1;
+    end
+end
+for i=1:m
+    for j=1:n
+        X(i,j)=x(i);
+        Y(i,j)=y(j);
+        Z(i,j)=(-2*X(i,j)+0*Y(i,j))/(-3);
+    end
+end
+hold on
+for i=1:m
+    for j=1:n
+        X2(i,j)=x(i);
+        Y2(i,j)=y(j);
+        Z2(i,j)=(-3*X2(i,j)-1*Y2(i,j))/1;
+    end
+end
+mesh(X,Y,Z);
+hold on
+mesh(X1,Y1,Z1);
+hold on
+mesh(X2,Y2,Z2);
+xlabel('X');
+ylabel('Y');
+zlabel('Z');

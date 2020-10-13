@@ -1,0 +1,5 @@
+Solve systems of linear equations Ax = B for x
+
+
+x = A\Bexample
+x = mldivide(A,B)

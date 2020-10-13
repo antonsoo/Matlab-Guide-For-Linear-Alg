@@ -1,0 +1,3 @@
+R = rref(A)
+[R,jb] = rref(A)
+[R,jb] = rref(A,tol)

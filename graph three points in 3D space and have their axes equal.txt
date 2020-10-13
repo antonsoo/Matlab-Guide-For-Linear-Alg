@@ -1,0 +1,7 @@
+%these points form the vertices of a right triangle.
+scatter3(1,1,1)
+hold on
+scatter3(-2,0,3)
+hold on
+scatter3(-3,-1,1)
+axis equal

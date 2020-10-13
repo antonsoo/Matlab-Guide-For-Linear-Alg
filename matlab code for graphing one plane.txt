@@ -1,0 +1,22 @@
+%select a folder (it's the icon with the green folder, a little below the top left corner), select a folder that you want the graph to export to
+%new script (in the top left corner)
+clear;
+x=-3:0.04:3;
+y=-3:0.04:3;
+m=numel(x);
+n=numel(y);
+X=zeros(m,n);
+Y=zeros(m,n);
+Z=zeros(m,n);
+for i=1:m
+    for j=1:n
+        X(i,j)=x(i);
+        Y(i,j)=y(j);
+        Z(i,j)=(2*X(i,j)+6*Y(i,j))/2;  %graphs an equation(plane) 2x+6y-2z=0
+    end
+end
+figure;
+mesh(X,Y,Z);
+xlabel('X');
+ylabel('Y');
+zlabel('Z');
